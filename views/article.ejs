@@ -1,0 +1,14 @@
+<% include partials/header.ejs %>
+	<div class="container">
+		<div>
+		    <h5 class="mb-1"><%- JSON.stringify(postData.title) %></h5>
+		    <p class="mb-1" style="white-space: pre-line"><%- postData.content %></p>
+		</div>
+		<div>
+			<%- JSON.stringify(commentData) %>
+		</div>
+	</div>
+
+
+
+<% include partials/footer.ejs %>

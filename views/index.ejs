@@ -1,0 +1,25 @@
+<% include partials/header.ejs %>
+	<div class="container">
+		<header class="jumbotron bg-light">
+			<h1>Want to read old posts from Dcard?</h1>
+			<p>Search by forums, dates, and popularity.</p>
+			<p>Not sure what to read? Try <a href="#"> find random posts</a>
+		</header>
+		<div class="list-group">
+		<% post.forEach(function(item){ %>
+		  <a href="/<%= item.id %>" class="list-group-item flex-column align-items-start">
+		    <div class="d-flex w-100 justify-content-between">
+		      <h5 class="mb-1"><%= item.title %></h5>
+		      <small><%= item.createdAt %></small>
+		    </div>
+		    <p class="mb-1"><%= item.excerpt %></p>
+		    <small>Likes: <%= item.likeCount %></small>
+		  </a>
+		
+		<% }); %>
+		</div>
+	</div>
+
+
+
+<% include partials/footer.ejs %>
